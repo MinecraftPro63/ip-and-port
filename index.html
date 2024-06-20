@@ -60,7 +60,7 @@
             position: relative;
         }
         .info label {
-            margin-right: 10px;
+            margin-bottom: 5px;
             font-size: 18px;
         }
         .info .input-container {
@@ -104,18 +104,18 @@
         </div>
         <div class="info-container">
             <div class="info">
+                <label for="server-ip">Server IP:</label>
                 <div class="input-container">
                     <input type="text" id="server-ip" value="ShadowRealm.xyz" readonly>
                     <button class="copy-button" onclick="copyToClipboard('server-ip')">Copy</button>
                 </div>
-                <label for="server-ip">Server IP:</label>
             </div>
             <div class="info">
+                <label for="server-port">Port:</label>
                 <div class="input-container">
                     <input type="text" id="server-port" value="25602" readonly>
                     <button class="copy-button" onclick="copyToClipboard('server-port')">Copy</button>
                 </div>
-                <label for="server-port">Port:</label>
             </div>
         </div>
     </div>
