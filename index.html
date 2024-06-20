@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Server Info</title>
     <style>
+        @import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            font-family: Arial, sans-serif;
+            font-family: 'Minecraft', sans-serif;
         }
         .background {
             position: absolute;
@@ -60,25 +62,31 @@
             margin-right: 10px;
             font-size: 18px;
         }
+        .info .input-container {
+            position: relative;
+        }
         .info input {
-            padding: 10px;
+            padding: 10px 40px 10px 10px; /* Adjusted padding for button space */
             font-size: 16px;
             border: none;
             border-radius: 5px;
             width: 200px;
             text-align: center;
-            margin-right: 10px;
             background-color: rgba(255, 255, 255, 0.8);
             color: #333;
         }
         .copy-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
             background-color: rgba(76, 175, 80, 0.8);
             border: none;
-            padding: 10px;
+            padding: 0 10px;
             font-size: 16px;
             color: white;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 0 5px 5px 0;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
         }
         .copy-button:active {
@@ -95,13 +103,17 @@
         <div class="info-container">
             <div class="info">
                 <label for="server-ip">Server IP:</label>
-                <input type="text" id="server-ip" value="123.45.67.89" readonly>
-                <button class="copy-button" onclick="copyToClipboard('server-ip')">Copy</button>
+                <div class="input-container">
+                    <input type="text" id="server-ip" value="123.45.67.89" readonly>
+                    <button class="copy-button" onclick="copyToClipboard('server-ip')">Copy</button>
+                </div>
             </div>
             <div class="info">
                 <label for="server-port">Port:</label>
-                <input type="text" id="server-port" value="25565" readonly>
-                <button class="copy-button" onclick="copyToClipboard('server-port')">Copy</button>
+                <div class="input-container">
+                    <input type="text" id="server-port" value="25565" readonly>
+                    <button class="copy-button" onclick="copyToClipboard('server-port')">Copy</button>
+                </div>
             </div>
         </div>
     </div>
