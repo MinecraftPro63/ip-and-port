@@ -54,6 +54,7 @@
         .info {
             margin: 20px 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
@@ -63,26 +64,24 @@
             font-size: 18px;
         }
         .info .input-container {
+            display: flex;
+            align-items: center;
             position: relative;
         }
         .info input {
-            padding: 10px 40px 10px 10px; /* Adjusted padding for button space */
+            padding: 10px;
             font-size: 16px;
             border: none;
-            border-radius: 5px;
+            border-radius: 5px 0 0 5px;
             width: 200px;
             text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
             color: #333;
         }
         .copy-button {
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
             background-color: rgba(76, 175, 80, 0.8);
             border: none;
-            padding: 0 10px;
+            padding: 10px;
             font-size: 16px;
             color: white;
             cursor: pointer;
@@ -101,22 +100,22 @@
             <button class="discord-button" onclick="window.location.href='https://discord.com'">Discord</button>
         </div>
         <div class="info">
-                <label for="server-ip">1.18.2 - 1.21</label>
+            <label>1.18.2 - 1.21</label>
         </div>
         <div class="info-container">
             <div class="info">
-                <label for="server-ip">Server IP:</label>
                 <div class="input-container">
                     <input type="text" id="server-ip" value="ShadowRealm.xyz" readonly>
                     <button class="copy-button" onclick="copyToClipboard('server-ip')">Copy</button>
                 </div>
+                <label for="server-ip">Server IP:</label>
             </div>
             <div class="info">
-                <label for="server-port">Port:</label>
                 <div class="input-container">
                     <input type="text" id="server-port" value="25602" readonly>
                     <button class="copy-button" onclick="copyToClipboard('server-port')">Copy</button>
                 </div>
+                <label for="server-port">Port:</label>
             </div>
         </div>
     </div>
