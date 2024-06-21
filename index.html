@@ -51,7 +51,6 @@
             border-radius: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
             font-family: 'Minecraft', sans-serif;
-            animation: scale-animation 2s infinite alternate;
         }
         .info {
             margin: 20px 0;
@@ -61,18 +60,17 @@
             justify-content: center;
             position: relative;
             font-size: 25px;
+            animation: move-up-animation 2s infinite alternate;
         }
         .info label {
             margin-bottom: 5px;
             font-size: 18px;
             font-family: 'Minecraft', sans-serif;
-            animation: scale-animation 2s infinite alternate;
         }
         .info .input-container {
             display: flex;
             align-items: center;
             position: relative;
-            animation: scale-animation 2s infinite alternate;
         }
         .info input {
             padding: 10px;
@@ -95,18 +93,17 @@
             border-radius: 0 5px 5px 0;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
             font-family: 'Minecraft', sans-serif;
-            animation: scale-animation 2s infinite alternate;
         }
         .copy-button:active {
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        @keyframes scale-animation {
+        @keyframes move-up-animation {
             0% {
-                transform: scale(1);
+                transform: translateY(0);
             }
             100% {
-                transform: scale(1.1);
+                transform: translateY(-3px);
             }
         }
     </style>
