@@ -62,6 +62,7 @@
         .info label {
             margin-bottom: 5px;
             font-size: 18px;
+            animation: scale 1.5s infinite alternate;
         }
         .info .input-container {
             display: flex;
@@ -87,9 +88,18 @@
             cursor: pointer;
             border-radius: 0 5px 5px 0;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            animation: scale 1.5s infinite alternate;
         }
         .copy-button:active {
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes scale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
         }
     </style>
 </head>
